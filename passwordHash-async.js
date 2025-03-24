@@ -14,10 +14,20 @@ bcrypt.genSalt(saltRounds, function (err, salt) {
 
     // 2. 사용자 로그인
     bcrypt.compare(myPassword, hash, function (err, result) {
-      console.log('로그인 결과1 : ', result)
+      if (result == true) {
+        ans1 = '로그인 성공'
+      } else {
+        ans1 = '로그인 실패'
+      }
+      console.log('로그인 결과1 : ', ans1)
     })
     bcrypt.compare(myPassword1, hash, function (err, result) {
-      console.log('로그인 결과2 : ', result)
+      if (result == true) {
+        ans2 = '로그인 성공'
+      } else {
+        ans2 = '로그인 실패'
+      }
+      console.log('로그인 결과2 : ', ans2)
     })
   })
 })
@@ -30,9 +40,19 @@ bcrypt.hash(myPassword, saltRounds, function (err, hash) {
 
   // 2. 사용자 로그인
   bcrypt.compare(myPassword, hash, function (err, result) {
-    console.log('로그인 결과1 : ', result)
+    if (result == true) {
+      ans1 = '로그인 성공'
+    } else {
+      ans1 = '로그인 실패'
+    }
+    console.log('로그인 결과1 : ', ans1)
   })
   bcrypt.compare(myPassword1, hash, function (err, result) {
-    console.log('로그인 결과2 : ', result)
+    if (result == true) {
+      ans2 = '로그인 성공'
+    } else {
+      ans2 = '로그인 실패'
+    }
+    console.log('로그인 결과2 : ', ans2)
   })
 })
