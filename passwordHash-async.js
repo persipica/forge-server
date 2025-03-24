@@ -41,7 +41,7 @@ bcrypt.hash(myPassword, saltRounds, function (err, hash) {
   // 2. 사용자 로그인
   bcrypt.compare(myPassword, hash, function (err, result) {
     if (result == true) {
-      ans1 = '로그인 성공'
+      ans1 = '로그인 성공?'
     } else {
       ans1 = '로그인 실패'
     }
